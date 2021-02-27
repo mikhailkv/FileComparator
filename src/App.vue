@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <div class="container">
+      <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+      <FileUpload />
+      <FileList />
+    </div>
+  </div>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FileUpload from './components/FileUpload.vue'
+import FileList from './components/FileList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FileUpload,
+    FileList
   }
 }
 </script>
@@ -22,5 +31,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+    max-width: 1000px;
+    margin: 1em;
 }
 </style>
